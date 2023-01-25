@@ -1,17 +1,21 @@
 {
   "name": "firebase-todo",
+  "homepage": "https://rishawraj.github.io/react-chat-app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "predeploy gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
     "firebase": "^9.16.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
