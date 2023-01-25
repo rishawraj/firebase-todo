@@ -4,7 +4,7 @@ Welcome to the Firebase Todo App with Authentication!
 
 This app allows users to create, read, update, and delete their own todo items, while also providing a secure authentication system to ensure that only authorized users can access the app.
 
-- [live app](https://rishawraj.github.io/react-chat-app/)
+- [live app](https://rishawraj.github.io/firebase-todo/)
 
 ## Features
 
