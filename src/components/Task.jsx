@@ -5,10 +5,8 @@ const Task = (props) => {
   const { handleDelete } = props;
   const { handleCheck } = props;
   const { handleEdit } = props;
-  //   const [check, setCheck] = useState(status);
   const [viewEdit, setViewEdit] = useState(false);
 
-  const [editInput, setEditInput] = useState("");
   const [editInputValue, setEditInputValue] = useState("");
 
   const inputEditRef = useRef(null);
