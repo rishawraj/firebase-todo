@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export default function Header() {
   const { currentUser, logout } = useAuth();
@@ -41,7 +42,9 @@ export default function Header() {
           <div style={{ fontWeight: "bold", color: "cadetblue" }}>
             {currentUser.email}
           </div>
-          <button onClick={handleLogout}>sign out</button>
+          <Button variant="secondary" onClick={handleLogout}>
+            Sign out
+          </Button>
         </div>
       ) : (
         ""

@@ -32,7 +32,7 @@ const TaskList = () => {
 
   return (
     <>
-      <h3>Task list</h3>
+      {/* <h3>Task list</h3> */}
       {tasks &&
         tasks.map((task) => {
           return (

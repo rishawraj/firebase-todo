@@ -9,6 +9,7 @@ import { TodoApp } from "./components/TodoApp";
 import PrivateRoute from "./components/Auth/PrivateRoute";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
@@ -19,9 +20,13 @@ function App() {
 
           <Container
             className="d-flex align-items-center justify-content-center"
-            style={{ flexGrow: 1 }}
+            style={{
+              flexGrow: 1,
+              backgroundColor: "lavender",
+              width: "100%",
+            }}
           >
-            <div className="w-100" style={{ maxWidth: "400px" }}>
+            <div>
               <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
