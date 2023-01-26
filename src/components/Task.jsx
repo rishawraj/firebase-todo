@@ -25,7 +25,7 @@ const Task = (props) => {
           background: "red",
           padding: "5px",
           margin: "5px",
-          width: "300px",
+          // width: "300px",
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -39,6 +39,7 @@ const Task = (props) => {
         <button onClick={(e) => handleDelete(uid)}>delete</button>
         <button onClick={() => setViewEdit(!viewEdit)}>edit</button>
       </div>
+
       {viewEdit ? (
         <div>
           <form
@@ -48,8 +49,9 @@ const Task = (props) => {
           >
             <input
               ref={inputEditRef}
+              defaultValue={text}
               onChange={(e) => {
-                setEditInputValue(e.target.value);
+                setEditInputValue(e.target.value ? e.target.value : text);
               }}
               required
             />

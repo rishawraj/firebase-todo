@@ -36,7 +36,6 @@ const Input = () => {
         required
       />
       <button type="submit">+</button>
-      <p>{currentUser.email}</p>
     </form>
   );
 };

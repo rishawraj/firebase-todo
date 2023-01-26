@@ -2,27 +2,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-
 import Signup from "./components/Auth/Signup";
 import Login from "./components/Auth/Login";
 import ForgotPassword from "./components/Auth/ForgotPassword";
 import { TodoApp } from "./components/TodoApp";
 import PrivateRoute from "./components/Auth/PrivateRoute";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <header>
-        <h1>TODO APP</h1>
-      </header>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <AuthProvider>
+        <Router basename="/firebase-todo">
+          <Header />
 
-      <Container
-        className="d-flex align-items-center justify-content-center"
-        style={{ minHeight: "100vh" }}
-      >
-        <div className="w-100" style={{ maxWidth: "400px" }}>
-          <Router basename="/firebase-todo">
-            <AuthProvider>
+          <Container
+            className="d-flex align-items-center justify-content-center"
+            style={{ flexGrow: 1 }}
+          >
+            <div className="w-100" style={{ maxWidth: "400px" }}>
               <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
@@ -37,11 +36,12 @@ function App() {
                   }
                 />
               </Routes>
-            </AuthProvider>
-          </Router>
-        </div>
-      </Container>
-    </>
+            </div>
+          </Container>
+          <Footer />
+        </Router>
+      </AuthProvider>
+    </div>
   );
 }
 
