@@ -28,18 +28,19 @@ function App() {
           >
             <div>
               <Routes>
-                <Route path="/" element={<Login />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
 
                 <Route
-                  path="/todo-app"
+                  path="/"
                   element={
                     <PrivateRoute>
                       <TodoApp />
                     </PrivateRoute>
                   }
                 />
+                <Route path="*" element={<Login />} />
               </Routes>
             </div>
           </Container>
